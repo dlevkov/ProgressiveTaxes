@@ -1,0 +1,17 @@
+<p>
+  progressive-tax works!
+</p>
+<form [formGroup]="registerForm">
+  <md-input-container>
+    <input type="number" mdInput placeholder="Income salary" formControlName="salaryField">
+  </md-input-container>
+  <button md-raised-button color="primary" (click)="Run()" [disabled]="!registerForm.valid">Run</button>
+  <button md-button (click)="clearSalary()">Clear to default</button>
+  <md-input-container>
+  <input mdInput placeholder="Taxes" formControlName="taxes">
+</md-input-container>
+<md-input-container>
+  <input mdInput placeholder="Netto" formControlName="netto">
+</md-input-container>
+</form>
+
